@@ -1,0 +1,456 @@
+/* Debug */ 
+
+div.debug{
+	width:554px;
+	margin:20px auto 20px auto;
+	font-size:11px;
+	background:#fff;
+	clear:both;
+	padding:8px;
+	border: 1px solid #CCC;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	overflow:hidden;
+}
+
+div.debug *{
+	font-family:Trebuchet MS,Arial !important;
+	margin:0;
+	padding:0;
+	border: 0;
+}
+div.debug div{
+	clear:both;
+}
+div.debug div.close{
+	clear:both;
+	display:block;
+	line-height:1px;
+	font-size:1px;
+	overflow:hidden;
+	padding:0 !important;
+	margin:0 !important;
+	background: none !important;
+	border: none !important;
+	margin-bottom:-1px !important;
+}
+
+
+/*	FORM  */
+
+div.debug form.filter{
+	border-bottom:1px dashed #CCC;
+	margin-bottom:4px;
+}
+div.debug form.filter *{
+	font-size:11px;
+}
+div.debug form.filter h1{
+	font-size:24px;
+	line-height:24px;
+	margin:0 0 0 0;
+	padding:0 0 0 18px;
+	text-align:center;
+	width:90px;
+}
+div.debug form.filter i{
+	color:#999;
+}
+div.debug form.filter pre{
+	color:#AAAAAA;
+	font-size:10px;
+	line-height:10px;
+	margin-bottom:5px;
+	text-align:right;
+	cursor:pointer;
+}
+div.debug form.filter table{
+	width:100%;
+	margin-bottom:8px;
+}	
+div.debug form.filter td{
+	white-space:nowrap;
+}	
+div.debug form.filter td.search{
+	width:160px;
+}
+div.debug form.filter input{
+	border:1px solid #CCC;
+}
+div.debug form.filter td.search input{
+	width:100%;
+	height:15px;
+	line-height:15px;
+	padding:0;
+	display:block;
+}
+
+div.debug form.filter label{
+	float:left;
+	display:block;
+	clear:both;
+}
+div.debug form.filter label input{
+	margin:2px 5px 1px 10px;
+	float:left;
+}
+
+div.debug form.filter div.more{
+	border-top:1px dashed #CCCCCC;
+	padding-top:6px;
+	display:none;
+}
+
+/* INFO  */
+
+div.variables,
+div.timers,
+div.clientHeaders{
+	border-bottom:1px dashed #CCCCCC;
+	margin-bottom:14px;
+	padding:13px 19px 19px;
+	white-space:pre-wrap;
+	display:none;
+}
+div.timers{
+	cursor: pointer
+}
+div.timers.expanded{
+	position: absolute;
+	left:0;
+	background: white;
+	z-index: 111;	
+	margin: 0 10px 14px 10px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	border:1px solid #CCC;
+}
+
+@-moz-document url-prefix() {
+    div.timers.expanded {
+		width: 95%;
+    }
+}
+
+
+
+div.timers.expanded td{
+	font-size: 11px !important;
+	line-height: 14px !important;
+	
+}
+
+
+div.timers th,
+div.variables th,
+div.customTags th{
+	text-align:left;
+	line-height: 11px;
+}
+div.timers td,
+div.variables td,
+div.customTags td{
+	padding-right:10px;
+}
+
+div.debug div.variables *,
+div.debug div.timers *,
+div.debug div.clientHeaders{
+	ont-family:monospace !important;
+	color:#444444;
+	font-size: 10px;
+}
+div.debug .dull *{
+	color:#999 !important
+}
+
+/* timers */
+
+div.debug div.timers table{
+	width:100%;
+}
+
+div.debug div.timers table tr:hover{
+ background:#eee;
+}
+div.debug div.timers table td{
+	line-height:8px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+div.debug div.timers table td.perc{
+	width:90%;
+}
+div.debug div.timers table td.perc div{
+	border: 1px outset #999;
+	margin-bottom:1px;
+	background:#CCC;
+}
+
+div.debug div.timers table tr.red div{
+	background: F66;
+}
+div.debug div.timers table tr.orange div{
+	background: #FC6;
+}
+div.debug div.timers table tr.yellow div{
+	background: #FF6;
+}
+
+/* errorstack */
+
+div.debug div.errorstack{
+	position: fixed;
+	right: 2px;
+	bottom: 0px;
+	width: 420px;
+	z-index: 101;
+	
+	max-height: 100%;
+	overflow: auto;
+	padding-bottom: 8px;
+	padding-right: 8px;
+	padding-top: 8px;
+}
+div.debug div.errorstack div{
+	border: 1px outset #777;	
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin-bottom: 2px;
+	padding: 6px 8px;
+	background: #444;
+    background: -moz-linear-gradient(top, #444, #999);
+    background: -webkit-gradient(linear,left top, left bottom, from(#444), to(#999));
+}
+
+
+div.debug div.errorstack header{
+	font-size: 11px;
+	font-weight: bold;
+	color:#DD1100;
+	color:#FFF;
+	position: relative;
+	display: block;
+}
+
+div.debug div.errorstack header a{
+	text-decoration: none;
+	color:#FFF;
+	
+}
+div.debug div.errorstack header i{
+	position: absolute;
+	right: 3px;
+	color: #AAA;
+	font-style: normal;
+}
+div.debug div.errorstack footer{
+	cursor: pointer;
+	max-height: 60px;
+	overflow: hidden;
+	display: block;
+	white-space: pre-wrap;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background: #fff;
+	border: 1px dotted #ccc;
+	padding: 2px 4px;
+	margin: 6px -4px -1px -4px;
+}
+div.debug div.errorstack footer.expanded{
+	max-height: none;
+}
+
+/*	RESULTS   */
+
+div.debug .match{
+	background-color:#FFFF00 !important;
+}
+div.debug div.results{
+	margin-top:10px;
+}
+
+
+
+div.debug div.results span.time{
+	float:right;
+	color: #AAA;
+	margin-top:-16px;
+}
+
+div.debug div.results span.time.block{
+	background: white;
+	border: 1px dotted #DDD;
+	-moz-border-radius:3px;
+	border-radius:3px;	
+	color: #888;
+	margin-right: -4px;
+	padding: 0px 3px;
+	margin: 0px;
+	position: absolute;
+	right: 1px;
+	top: 1px;
+}
+
+
+
+
+div.debug div.results{
+	font-size:11px;
+	line-height: 15px;
+}
+
+/*	Embedded Errors */
+div.debug div.results .error{
+	margin-bottom:3px;
+	background:#FFFFFF none repeat scroll 0 0;
+	border:1px outset #FF0000;
+	color:#DD1100;
+	padding:2px 5px;
+	width:auto;
+	cursor: pointer;
+}
+
+
+div.debug div.results .error div{
+	border-color: #FCC;
+	color: black;
+	height: 15px;
+	overflow: hidden;
+	padding: 2px 5px;
+	white-space: pre;
+	margin-top: 2px;	
+}
+
+div.debug div.results .error div.expanded{
+	height: auto;
+}
+
+/*	Nested blocks */
+
+
+div.debug div.results div{
+	border: 1px solid #CCC;
+	margin:3px 0px 3px 0px;
+	padding:2px 5px 2px 5px;
+	padding: 5px 5px 2px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	position: relative;
+
+	
+}
+div.debug div.results div{background:#EEE;
+
+    background: #008800;
+    /* Mozilla: */
+    background: -moz-linear-gradient(top, #FFF, #F5F5F5);
+    /* Chrome, Safari:*/
+    background: -webkit-gradient(linear,
+                left top, left bottom, from(#F5F5F5), to(#FFFFFF));
+}
+div.debug div.results div div{
+    background: #FFF;
+    background: -moz-linear-gradient(top, #FFF, #F5F5F5);
+    background: -webkit-gradient(linear,left top, left bottom, from(#F5F5F5), to(#FFFFFF));
+}
+div.debug div.results div div div{background:#EEE;}
+div.debug div.results div div div div{background:#FFF;}
+div.debug div.results div div div div div{background:#EEE;}
+div.debug div.results div div div div div div{background:#FFF;}
+div.debug div.results div div div div div div div{background:#EEE;}
+
+div.debug div.results span.type{
+    background: #F5F5F5;
+    background: -moz-linear-gradient(top, #FFF, #F5F5F5);
+    background: -webkit-gradient(linear,left top, left bottom, from(#F5F5F5), to(#FFFFFF));
+}
+div.debug div.results div span.type{
+    background: #FFFFFF;
+    background: -moz-linear-gradient(top,#F5F5F5,#FFFFFF);
+    background: -webkit-gradient(linear,left top, left bottom, from(#FFFFFF), to(#F5F5F5));
+}
+
+
+div.debug div.results header{
+	display: block;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	margin-right: 1px;
+	margin-top: -1px;
+	text-transform: capitalize;
+}
+div.debug div.results header.section{
+font-size: 15px;
+font-weight: normal;
+margin-bottom: 6px;
+margin-top: 12px;
+}
+
+div.debug div.results label{
+	color:#666;
+	margin-right: 4px;
+}
+div.debug div.results span.pair{
+	margin-right: 4px;
+	display: block;
+}
+div.debug div.results span.type{
+	border: 1px dotted #CCC;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	display: inline-block;
+	vertical-align: top;
+	padding: 4px 4px 0px;
+	margin: 1px 4px 1px 0px;
+}
+
+div.debug div.results span.pair span.pair,
+div.debug div.results span.type span.pair{
+	margin-right: 0px;
+}
+
+
+div.debug div.results span.pair span.type,
+div.debug div.results span.type span.type{
+	margin: -3px 0px 4px;
+}
+
+div.debug div.results span.type header{
+	line-height: 12px;
+}
+
+/* Iteratable */
+
+div.debug div.results ul{
+	margin: 3px 0 0 0;
+	padding:0px;
+}
+
+div.debug div.results ul li{
+	list-style-type:disc;
+	list-style:none;
+	clear:both;
+	border-top:1px dashed #DDD;	
+}
+
+/* code */
+
+div.debug div.results code{
+	display:block;
+	border: 1px dotted #CCC;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background:#FFF;
+	margin-bottom:4px;
+	padding:6px 8px;
+	clear:both;
+	white-space:pre-wrap;
+	
+}
+div.debug div.results code,
+div.debug div.results code *{
+	font-family: "panic sans",monaco, verdana, courier, monospace !important;
+	font-size: 9px !important;
+}
