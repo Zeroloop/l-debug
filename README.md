@@ -1,6 +1,7 @@
 l-debug
 =======
+This is the Lasso 8.6 branch of L-Debug. 
 
-L-Debug is a debug stack for Lasso 9.
+Documentation online here: http://goo.gl/GGbV9O
 
-Documentation online here: http://goo.gl/X6qDEk
+The Lasso 9 version is available here: https://github.com/zeroloop/l-debug
