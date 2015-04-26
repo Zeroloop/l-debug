@@ -26,10 +26,11 @@
 			'class'	= 'debug',
 		
 			//	Style / Interface elements	
-			'js' 		= 'http://www.l-debug.org/__classes/debug/debug.js?106',
-			'chili' 	= 'http://www.l-debug.org/__classes/debug/chili-L.js',
-			'jquery' 	= 'http://www.l-debug.org/_js/jquery.js',
-			'css' 		= 'http://www.l-debug.org/__classes/debug/debug.css?108',
+			'js' 		= 'https://cdn.rawgit.com/zeroloop/l-debug/Lasso-8.6/debug.js',
+			'chili' 	= 'https://cdn.rawgit.com/zeroloop/l-debug/Lasso-8.6/chili-L.js',
+			'jquery' 	= 'https://code.jquery.com/jquery-1.4.4.min.js',
+			'css' 		= 'https://cdn.rawgit.com/zeroloop/l-debug/Lasso-8.6/debug.js',
+			
 			'style' 	= string,
 			
 			//	Iterable types
