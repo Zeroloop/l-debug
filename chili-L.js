@@ -467,11 +467,6 @@ $.fn.Lchili = function( options ) {
 		//tried also the function replaceHtml from http://blog.stevenlevithan.com/archives/faster-than-innerhtml
 		//but it was not faster nor without sideffects (it was not possible to count spans into el)
 
-		//opera and safari select PRE text correctly 
-		if( $.browser.msie || $.browser.mozilla ) {
-			enableSelectionHelper( el );
-		}
-
 		var $that = $el.parent();
 		var classes = $that.attr( 'class' );
 		var ln = /ln-(\d+)-([\w][\w\-]*)|ln-(\d+)|ln-/.exec( classes );
