@@ -380,7 +380,6 @@ div.debug div.results header{
 	font-weight: bold;
 	margin-right: 1px;
 	margin-top: -1px;
-	text-transform: capitalize;
 }
 div.debug div.results header.section{
 font-size: 15px;
