@@ -978,7 +978,7 @@ define ldebug => type {
 				content_body->append(
 					'<script>
 						$("div.debug:last").html(unescape("'+encode_strictURL(.content)+'"));
-						setTimeout(setupDebug,100)
+						setTimeout(function(){try{ setupDebug() } catch(e){}},100)
 					</script>'
 				)
 			
